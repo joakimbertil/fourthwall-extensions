@@ -1,5 +1,4 @@
 # Fourthwall Extensions
-
 This repository contains extensions for [Fourthwall](https://link.fourthwall.com/ref/say-it-in-swedish), a platform that provides a way for digital creators to sell their products and offer memberships.
 
 It should be noted that this is a private community project and not made in affiliation with Fourthwall.
