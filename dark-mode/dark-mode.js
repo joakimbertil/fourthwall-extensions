@@ -3,6 +3,8 @@
  * @version 1.0.0
  * @description This script adds dark mode to your Fourthwall website.
  */
+const useCustomScheme = false;
+
 const scheme = {
   mode: "dark",
   selectors: [":root", "#fw-section-header"],
@@ -42,16 +44,24 @@ const toggleElement = (() => {
 
 const styleElement = (() => {
   const styleElement = document.createElement("style");
-  let css = scheme.selectors.join(",");
 
-  css += "{";
+  let css;
 
-  Object.entries(scheme.vars).map((variable) => {
-    const [key, value] = variable;
-    css += `--${key}: ${value};`;
-  });
+  if(useCustomScheme) {
+    css = scheme.selectors.join(",");
 
-  css += "}";
+    css += "{";
+
+    Object.entries(scheme.vars).map((variable) => {
+      const [key, value] = variable;
+      css += `--${key}: ${value};`;
+    });
+
+    css += "}";
+  }
+  else {
+    css = "html{filter: invert(1) hue-rotate(180deg);} img{filter: invert(1) hue-rotate(180deg);}";
+  }
 
   styleElement.innerText = css;
 

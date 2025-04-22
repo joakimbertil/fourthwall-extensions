@@ -5,6 +5,12 @@ Fourthwall doesn't support dark mode yet but since their themes rely on css vari
 For simplicity, this extension is made with only javascript and needs to be wrapped in `<script></script>` tags.
 
 ### Options
+Set `useCustomScheme` to `true` if you want to use your own scheme below rather than the default behavior of just flipping the colors
+```javascript
+const useCustomScheme = false;
+```
+
+The code below then let's you specify your own colors.
 ```javascript
 const scheme = {
   mode: "dark", // If your original theme is light, set this to dark
