@@ -1,6 +1,6 @@
 /**
  * Dark Mode
- * @version 1.0.0
+ * @version 1.0.1
  * @description This script adds dark mode to your Fourthwall website.
  */
 const useCustomScheme = false;
