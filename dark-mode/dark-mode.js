@@ -1,6 +1,6 @@
 /**
  * Dark Mode
- * @version 1.0.2
+ * @version 1.0.3
  * @description This script adds dark mode to your Fourthwall website.
  */
 const useCustomScheme = false;
@@ -60,7 +60,7 @@ const styleElement = (() => {
     css += "}";
   }
   else {
-    css = "html{filter: invert(1) hue-rotate(180deg);} img{filter: invert(1) hue-rotate(180deg);}";
+    css = "html,img,video,iframe{filter: invert(1) hue-rotate(180deg);}";
   }
 
   styleElement.innerText = css;
