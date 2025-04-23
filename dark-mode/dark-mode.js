@@ -31,6 +31,7 @@ const toggleElement = (() => {
   const toggleElement = document.createElement("a");
   toggleElement.id = "scheme-toggle";
   toggleElement.style = "cursor: pointer;";
+  toggleElement.innerHTML = icons.lightbulbOff;
 
   const listItem = document.createElement("li");
   listItem.className = "header__list-item";
