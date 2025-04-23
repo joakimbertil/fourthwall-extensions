@@ -1,6 +1,6 @@
 /**
  * Dark Mode
- * @version 1.0.1
+ * @version 1.0.2
  * @description This script adds dark mode to your Fourthwall website.
  */
 const useCustomScheme = false;
@@ -104,8 +104,17 @@ const toggleScheme = () => {
   }
 };
 
+const recallScheme = () => {
+  const mode = detectScheme();
+
+  if (scheme.mode === mode) {
+    toggleIcon();
+    document.body.append(styleElement);
+  }
+};
+
 const initSchemeState = () => {
-  toggleIcon();
+  recallScheme();
 
   toggleElement.addEventListener("click", toggleScheme);
 };
